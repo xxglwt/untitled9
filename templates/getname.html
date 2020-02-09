@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {{ abc|upper }}
+<h1>sdfsdf</h1>
+{#    {% a_list = ('a','b','c') %}#}
+{#    #}
+<ul>
+    {% for a in content %}
+        <li>a</li>
+    {% endfor %}
+</ul>
+{% include "child.html" %}
+<h1>继承信息</h1>
+{% block mainbody %}
+    <p>继承了的内容</p>
+{% endblock %}
+</body>
+</html>
