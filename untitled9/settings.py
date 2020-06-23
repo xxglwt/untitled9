@@ -39,13 +39,16 @@ INSTALLED_APPS = [
     'books',
     'demo',
     'polls.apps.PollsConfig',
+    'login',
+    'captcha',
+
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    # 'django.middleware.csrf.CsrfViewMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -72,7 +75,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'untitled9.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
@@ -89,8 +91,8 @@ DATABASES = {
         'NAME': 'banks',
         'USER': 'root',
         'PASSWORD': 'admin',
-        'HOST':'localhost',
-        'PORT':'3306',
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
 
@@ -152,15 +154,14 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'zh-hans'
 
-# TIME_ZONE = 'Asia/Shanghai'
-TIME_ZONE='utc'
-UZE_TZ=False
+TIME_ZONE = 'Asia/Shanghai'
+#TIME_ZONE = 'utc'
+UZE_TZ = False
 USE_I18N = True
 
 USE_L10N = True
 
 USE_TZ = False
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
